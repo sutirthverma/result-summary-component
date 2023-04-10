@@ -48,11 +48,12 @@ body {
 
 .component1 {
     color: white;
-    background: rgb(0, 64, 128);
-    background: linear-gradient(180deg, rgba(0, 64, 128, 1) 0%, rgba(29, 77, 216, 1) 100%);
+    background: rgb(90,52,249);
+    background: linear-gradient(180deg, rgba(90,52,249,1) 0%, rgba(46,43,233,1) 100%); 
+   padding: 1em 1em 2em 1em;
 
-    padding: 1em 1em 2em 1em;
 }
+
 
 h1 {
     font-size: 18px;
@@ -63,11 +64,10 @@ h1 {
 
 .resultMarks {
 
-    background: rgb(0, 64, 128);
-    background: linear-gradient(180deg, rgba(0, 64, 128, 1) 0%, rgba(29, 77, 216, 1) 100%);
-    margin: 1em 0em;
-    margin: auto !important;
-    width: 150px !important;
+    background: rgb(90,52,249);
+    background: linear-gradient(0deg, rgba(90,52,249,1) 0%, rgba(78,33,202,1) 100%); 
+    margin: auto;
+     width: 150px !important;
     height: 150px !important;
     border-radius: 50%;
     display: flex;
@@ -79,6 +79,7 @@ h1 {
 .scoredMarks {
     font-size: 2.5em;
     margin-bottom: 0.1em;
+    font-weight: 700;
 }
 
 .maxMarks {
@@ -92,6 +93,11 @@ h2 {
 
 .overview {
     color: var(--paleBlue);
+}
+
+.comp2Heading{
+    font-weight: 700;
+    font-size: 1.2em;
 }
 
 .bar {
@@ -216,6 +222,8 @@ h2 {
 
 }
 
+/* Desktop */
+
 @media (min-width: 701px) {
 
     body{
@@ -225,15 +233,64 @@ h2 {
         height: 100vh;
     }
 
-    main {
+   main {
         display: flex;
-        width: 70%;
+        max-width: 80%;
+        -webkit-box-shadow: 10px 10px 24px -15px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 24px -15px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 24px -15px rgba(0,0,0,0.75);
+        border-radius: 20px;
     }
 
-    .component1, .component2
+    
+     .component1, .component2
     {
+        padding: 1em;
         width: 50%;
+    } 
+
+    .component1{
+        border-radius: 20px;
+        text-align: center;
+    } 
+
+
+    .component1, .component2{
+        width: 70vh;
+        max-width: 60vh;
+        height: 70vh;
+
+    }
+
+    h1{
+        margin-bottom: 2em !important;
+    }
+
+    h2{
+        font-size: 1.4em;
+        font-weight: 600;
+        margin-bottom: 0.4em;
+    }
+
+    .resultMarks{
+        margin-bottom: 2em !important;
+    }
+
+    .overview{
+        width: 230px;
+        margin: auto;
+        font-size: 1.1em;
+    }
+
+    .comp2Heading{
+        margin-top: 1em;
     }
 
 
+    .btn:hover{
+        background: rgb(90,52,249);
+        background: linear-gradient(180deg, rgba(90,52,249,1) 0%, rgba(46,43,233,1) 100%); 
+        cursor: pointer;        
+    }
+    
 }
